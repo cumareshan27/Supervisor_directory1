@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Textfield from './TextField';
 import API from "../utils/API.js"
 
-class Resident extends Component {
+class Supervisor extends Component {
 
   //  this.state = { value: '' };
   state = {
-    resident: [],
+    Supervisor: [],
     firstName: "",
     lastName: "",
     middleName: "",
@@ -32,7 +32,7 @@ class Resident extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.saveResident({
+    API.saveSupervisor({
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       middleName: this.state.middleName,
@@ -45,13 +45,13 @@ class Resident extends Component {
       zipCode: this.state.zipCode,
     })
      .then(res => console.log(res))
-      .then(this.props.history.push("/Supervisor") )
+      // .then(this.props.history.push("https://www.google./") )
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div className="Resident">
+      <div className="Supervisor">
         <h1>Residence Create Profile</h1>
         <form>
           <Textfield 
@@ -80,4 +80,4 @@ class Resident extends Component {
   }
 }
 
-export default Resident;
+export default Supervisor;

@@ -17,4 +17,5 @@ export default {
   saveResident: function(residentData) {
     return axios.post("/api/residents", residentData);
   }
+  
 };
