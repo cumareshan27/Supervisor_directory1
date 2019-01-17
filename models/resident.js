@@ -5,7 +5,7 @@ const residentSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   middleName: { type: String, required: true },
-  phoneNumber: { type: Number, required: true },
+  phoneNumber: { type: String, required: true },
   email: { type: String, required: true },
   addressLine1: { type: String, required: true },
   addressLine2: { type: String, required: false },

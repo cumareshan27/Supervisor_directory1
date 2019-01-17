@@ -5,12 +5,17 @@ const residentController = require("../../controllers/residentController");
 router.route("/")
   .get(residentController.findAll)
   .post(residentController.create);
-
+  
 // Matches with "/api/resident/:id"
 router
   .route("/:id")
   .get(residentController.findById)
   .put(residentController.update)
   .delete(residentController.remove);
+
+router
+.route("/new")
+.get(residentController.findByNew);
+
 
 module.exports = router;

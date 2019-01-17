@@ -34,5 +34,9 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+  findByNew: function(req, res) {
+    db.Resident
+    .findOne().sort({ "_id": -1 }).limit(1).exec((err, data))
+  },
 };

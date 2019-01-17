@@ -45,15 +45,18 @@ class Resident extends Component {
       zipCode: this.state.zipCode,
     })
      .then(res => console.log(res))
-      .then(this.props.history.push("/Supervisor") )
-      .catch(err => console.log(err));
+    //  .then(API.newestResident())
+
+      .then(this.props.history.push("/Profile"))
+      // .catch(err => console.log(err));
   };
 
   render() {
     return (
       <div className="Resident">
         <h1>Residence Create Profile</h1>
-        <form>
+        <form onSubmit={this.handleFormSubmit}>
+
           <Textfield 
             onChange={this.handleInputChange} 
             id="FirstName" 
@@ -70,10 +73,10 @@ class Resident extends Component {
           <Textfield onChange={this.handleInputChange} id="City" label="City" value={this.state.city} name="city" />
           <Textfield onChange={this.handleInputChange} id="State" label="State" value={this.state.state} name="state" />
           <Textfield onChange={this.handleInputChange} id="ZipCode" label="ZipCode" value={this.state.zipCode} name="zipCode" />
-          {/* <div>
+          <div>
             <input type="submit" value="Submit" />
-          </div> */}
-          <button onClick={this.handleFormSubmit}></button>
+          </div>
+          {/* <button onClick={this.handleFormSubmit}></button> */}
         </form>
       </div>
     );

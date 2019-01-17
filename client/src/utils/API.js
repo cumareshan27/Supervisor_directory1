@@ -16,6 +16,10 @@ export default {
   // Saves a resident to the database
   saveResident: function(residentData) {
     return axios.post("/api/residents", residentData);
+  },
+  // Get the last Resident
+  newestResident: function(){
+    return axios.get("/api/residents/new");
   }
   
 };
