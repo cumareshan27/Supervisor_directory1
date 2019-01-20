@@ -90,7 +90,7 @@ class Login extends Component {
               {/* <Segment textAlign="right">Sign up now</Segment> */}
               <p className="signupText">Sign up now</p>
               <Segment basic textAlign="center" className="buttonBox"><Button type='submit' onClick={this.handleFormSubmit} >Login</Button></Segment>
-              <p className="copyright">Copyright © 2019 - Steven M. Carpenter</p>
+              <p className="copyright">Copyright © 2019 - Kumar Ramanathan</p>
             </Form>
 
           </Grid.Column>

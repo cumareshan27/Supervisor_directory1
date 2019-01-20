@@ -25,7 +25,7 @@ export default {
     // Input the user details to users table  
     
     getUser: (query) => {
-      return axios.post("/api/login", query);
+      return axios.get("/api/login", query);
     },
     createUser: (query) => {
       return axios.post("/api/login", query);

@@ -5,7 +5,7 @@ const loginController = require("../../controllers/loginController");
 // Matches with "/api/residents"
 router.route("/")
 
-  .post(loginController.signUp);
+  .post(loginController.logout);
   // If no API routes are hit, send the React app
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
