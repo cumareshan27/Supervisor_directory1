@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './style.css';
-import API from "../../utils/API";
+// import './style.css';
+import API from "../utils/API";
 import { Button, Header, Grid, Icon, Form, Image, Input, Label, Segment, Container } from 'semantic-ui-react';
 
 
@@ -86,7 +86,7 @@ class Signup extends Component {
                 <input name='password' onChange={this.handleInputChange} placeholder='Password' type="password" />
               </Form.Field>
               <Segment basic textAlign="center"><Button type='submit' onClick={this.handleFormSubmit} >Submit</Button></Segment>
-              <p className="copyright">Copyright © 2019 - Steven M. Carpenter</p>
+              <p className="copyright">Copyright © 2019 - Kumar Ramanathan</p>
             </Form>
 
           </Grid.Column>

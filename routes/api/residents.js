@@ -13,6 +13,7 @@ router
   .put(residentController.update)
   .delete(residentController.remove);
 
+// Matches with "/api/newresidents/:id"
 router
 .route("/new")
 .get(residentController.findByNew);

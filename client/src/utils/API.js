@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all resident
   getResidents: function() {
-    return axios.get("/api/residents");
+    return axios.get("/api/residents/dispay");
   },
   // Gets the resident with the given id
   getResident: function(id) {
@@ -20,6 +20,19 @@ export default {
   // Get the last Resident
   newestResident: function(){
     return axios.get("/api/residents/new");
-  }
+  },
+
+    // Input the user details to users table  
+    
+    getUser: (query) => {
+      return axios.post("/api/login", query);
+    },
+    createUser: (query) => {
+      return axios.post("/api/login", query);
+    },
+    checkAuth: function(query) {
+      console.log("Quer in API = " + JSON.stringify(query));
+      return axios.post("/api/verify", query);
+    }
   
 };

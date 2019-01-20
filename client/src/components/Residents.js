@@ -47,7 +47,7 @@ class Resident extends Component {
      .then(res => console.log(res))
     //  .then(API.newestResident())
 
-      .then(this.props.history.push("/Profile"))
+      // .then(this.props.history.push("/Profile"))
       // .catch(err => console.log(err));
   };
 

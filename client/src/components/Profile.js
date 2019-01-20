@@ -15,6 +15,7 @@ class Profile extends Component {
       return(
           <div>
               <h1>Resident Profile</h1>
+              
               {/* {this.state.resident} */}
           </div>
       )

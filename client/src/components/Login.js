@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import API from "../../utils/API";
+import API from "../utils/API";
 import { Button, Header, Grid, Icon, Form, Segment, } from 'semantic-ui-react';
-import './style.css';
+// import './style.css';
 
 
 class Login extends Component {
@@ -55,6 +55,7 @@ class Login extends Component {
   render() {
 
     return (
+      // <div>Test Login Page</div>
       <div className="LoginMain">
         <Grid centered>
           <Grid.Column width={6}>
