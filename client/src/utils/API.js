@@ -32,7 +32,7 @@ export default {
     },
     checkAuth: function(query) {
       console.log("Quer in API = " + JSON.stringify(query));
-      return axios.post("/api/verify", query);
+      return axios.get("/api/verify", query);
     }
   
 };

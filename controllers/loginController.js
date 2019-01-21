@@ -24,25 +24,25 @@ module.exports = {
     if (!firstName) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify a first name.'
+        message: 'SignUp ERROR: You must specify a first name.'
       });
     };
     if (!lastName) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify a last name.'
+        message: 'Signup ERROR: You must specify a last name.'
       });
     };
     if (!email) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify an email address.'
+        message: 'Signup ERROR: You must specify an email address.'
       });
     };
     if (!password) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify a password.'
+        message: 'Signup ERROR: You must specify a password.'
       });
     };
     email = email.toLowerCase();
@@ -55,12 +55,12 @@ module.exports = {
       if (err) {
         return res.send({
           success: false,
-          message: 'ERROR:  Server error'
+          message: 'Signup db.find user ERROR:  Server error'
         });
       } else if (exists.length > 0) {
         return res.send({
           success: false,
-          message: 'ERROR:  Account requested does not meet requriements'
+          message: 'Signup db.find user  ERROR:  Account requested does not meet requriements'
         });
       };
     });
@@ -103,13 +103,13 @@ module.exports = {
     if (!email) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify an email address.'
+        message: 'Signin ERROR: You must specify an email address.'
       });
     };
     if (!password) {
       return res.send({
         success: false,
-        message: 'ERROR: You must specify a password.'
+        message: 'Signin ERROR: You must specify a password.'
       });
     };
     email = email.toLowerCase();
@@ -118,17 +118,17 @@ module.exports = {
     User.find({
       email: email
     }, (err, users) => {
-//      console.log("Found user = " + users);
+       console.log("Found user = " + users);
       if (err) {
         return res.send({
           success: false,
-          message: 'ERROR:  Server error'
+          message: 'singin user.find ERROR:  Server error'
         });
       };
       if (users.length != 1) {
         return res.send({
           success: false,
-          message: 'ERROR:  Unable to process login.'
+          message: 'singin user.find  ERROR:  Unable to process login.'
         });
       };
 
@@ -182,7 +182,7 @@ module.exports = {
         // console.log("fail 1");
         return res.send({
           success: false,
-          message: "ERROR:  Unable to obtain user token."
+          message: "verify ERROR:  Unable to obtain user token."
         });
       };
 
@@ -191,13 +191,13 @@ module.exports = {
         // console.log("Session length = " + sessions.length);
         return res.send({
           success: false,
-          message: "ERROR:  Unable to verify session."
+          message: "verify ERROR:  Unable to verify session."
         });
       } else {
         // console.log("success 3");
         return res.send({
           success: true,
-          message: "Successfully verified session token."
+          message: "verify Successfully verified session token."
         });
       };
     });
@@ -221,13 +221,13 @@ module.exports = {
       if (err) {
         return res.send({
           success: false,
-          message: "ERROR:  Unable to obtain user token."
+          message: "logout ERROR:  Unable to obtain user token."
         });
       };
 
         return res.send({
           success: true,
-          message: "Successfully logged out."
+          message: "logout Successfully logged out."
         });
       // };
     });

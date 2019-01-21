@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const residentsRoutes = require("./residents");
 const loginRoutes = require("./login")
+const signUpRoutes = require("./signup")
+const verifyRoutes = require("./verify")
+const logoutRoutes = require("./logout")
 //const loginController = require("../../controllers/loginController");
 //const singupRoutes = require("./signup");
 // const homeRoutes = require("./home")
@@ -8,6 +11,9 @@ const loginRoutes = require("./login")
 // Book routes
 router.use("/residents", residentsRoutes);
 router.use("/login", loginRoutes);
+router.use("/signup", signUpRoutes);
+router.use("/verify", verifyRoutes);
+router.use("/logout", logoutRoutes);
 
 
 

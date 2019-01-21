@@ -4,7 +4,10 @@ const loginController = require("../../controllers/loginController");
 
 // Matches with "/api/residents"
 router.route("/")
-  .post(loginController.signIn)
+  // .post(loginController.signIn)
+  .post(loginController.signUp)
+  .get(loginController.verify)
+  .get(loginController.signIn);
  
 
   // If no API routes are hit, send the React app
