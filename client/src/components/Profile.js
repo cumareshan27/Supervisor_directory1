@@ -7,18 +7,19 @@ class Profile extends Component {
     resident: [],
   };
   componentDidMount() {
-    API.getResidents().then(res => this.setState({ resident: res.data }));
+    API.newestResident().then(res => this.setState({ resident: res.data }));
   }
 
   render(){
-      console.log(this.state.resident.pop());
-      return(
-          <div>
-              <h1>Resident Profile</h1>
-              
-              {/* {this.state.resident} */}
-          </div>
-      )
+    // console.log(this.state.resident.pop());
+    return(
+      <div>
+        <h1>Resident Profile</h1>
+        <p>
+          {JSON.stringify(this.state.resident)}
+        </p>
+      </div>
+    )
   }
  
 }

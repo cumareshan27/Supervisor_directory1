@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Textfield from './TextField';
-import API from "../utils/API.js";
-import Checkbox from "./Checkbox.js";
-
-const OPTIONS = ["Mental Health", "Kumar", "Joe", "Ryan"];
+import API from "../utils/API.js"
 
 class Resident extends Component {
 
@@ -21,53 +18,8 @@ class Resident extends Component {
     state:"",
     zipCode:"",
     category:[],
-
-    checkboxes: OPTIONS.reduce(
-      (options, option) => ({
-        ...options,
-        [option]: false
-      }),
-      {}
-    )
   };
 
-  selectAllCheckboxes = isSelected => {
-    Object.keys(this.state.checkboxes).forEach(checkbox => {
-      // BONUS: Can you explain why we pass updater function to setState instead of an object?
-      this.setState(prevState => ({
-        checkboxes: {
-          ...prevState.checkboxes,
-          [checkbox]: isSelected
-        }
-      }));
-    });
-  };
-
-  selectAll = () => this.selectAllCheckboxes(true);
-
-  deselectAll = () => this.selectAllCheckboxes(false);
-
-  handleCheckboxChange = changeEvent => {
-    const { name } = changeEvent.target;
-
-    this.setState(prevState => ({
-      checkboxes: {
-        ...prevState.checkboxes,
-        [name]: !prevState.checkboxes[name]
-      }
-    }));
-  };
-
-  createCheckbox = option => (
-    <Checkbox
-      label={option}
-      isSelected={this.state.checkboxes[option]}
-      onCheckboxChange={this.handleCheckboxChange}
-      key={option}
-    />
-  );
-
-  createCheckboxes = () => OPTIONS.map(this.createCheckbox);
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -91,16 +43,14 @@ class Resident extends Component {
       city: this.state.city,
       state: this.state.state,
       zipCode: this.state.zipCode,
-      category: Object.keys(this.state.checkboxes).filter(checkbox => this.state.checkboxes[checkbox])
+      category : []
     })
-      .then(res => console.log(res))
+     .then(res => console.log(res))
     //  .then(API.newestResident())
 
-      .then(this.props.history.push("/Profile"))
+       .then(this.props.history.push("/Profile"))
       // .catch(err => console.log(err));
   };
-
-
 
   render() {
     return (
@@ -124,7 +74,6 @@ class Resident extends Component {
           <Textfield onChange={this.handleInputChange} id="City" label="City" value={this.state.city} name="city" />
           <Textfield onChange={this.handleInputChange} id="State" label="State" value={this.state.state} name="state" />
           <Textfield onChange={this.handleInputChange} id="ZipCode" label="ZipCode" value={this.state.zipCode} name="zipCode" />
-          {this.createCheckboxes()}
           <div className="form-group mt-2">
               <button
                 type="button"

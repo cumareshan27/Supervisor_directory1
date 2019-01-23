@@ -36,7 +36,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByNew: function(req, res) {
+    console.log("New Resident Display");
     db.Resident
-    .findOne().sort({ "_id": -1 }).limit(1).exec((err, data))
+    .findOne().sort({ "_id": -1 }).limit(1).exec()
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
 };

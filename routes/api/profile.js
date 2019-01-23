@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const residentController = require("../../controllers/residentController");
 
-// Matches with "/api/residents"
+// Matches with "/api/profile"
 router.route("/")
-  .get(residentController.findAll)
+  .get(residentController.findByNew)
   .post(residentController.create);
   
 // Matches with "/api/resident/:id"
@@ -12,11 +12,6 @@ router
   .get(residentController.findById)
   .put(residentController.update)
   .delete(residentController.remove);
-
-// Matches with "/api/newresidents/:id"
-router
-  .route("/new")
-  .get(residentController.findByNew);
 
 
 module.exports = router;

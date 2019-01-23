@@ -19,7 +19,9 @@ function App() {
           <Route exact path="/Profile" component={Profile} />
           {/* <Route exact path="/registersupervior" component={Supervisors} /> */}
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Login}/>
+          <Route exact path="/signin" component={Login} />
+          {/* <Route exact path="/logout" component={Logout} /> */}
+          <Route exact path="/signup" component={Signup}/>
           {/* <Route exact path="/books" component={Books} />
           <Route exact path="/books/:id" component={Detail} />
           <Route component={NoMatch} /> */}

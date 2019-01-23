@@ -11,7 +11,8 @@ const residentSchema = new Schema({
   addressLine2: { type: String, required: false },
   city: { type: String, required: true },
   state: { type: String, required: true },
-  zipCode: { type: String, required: true }
+  zipCode: { type: String, required: true },
+  category : { type: Array, required: false }
 });
 
 const Resident = mongoose.model("Resident", residentSchema);
