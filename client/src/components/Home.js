@@ -124,7 +124,7 @@ class Home extends Component {
               </form>
             </div>
             <div className="middle aligned column">
-              <button className="ui big button">
+              <button className="ui big button" >
                 <i aria-hidden="true" className="signup icon" />Sign up
               </button>
             </div>
