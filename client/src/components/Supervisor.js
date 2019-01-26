@@ -78,6 +78,7 @@ class Supervisor extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log("Submit button supervisor")
     event.preventDefault();
     API.saveSupervisor({
       firstName: this.state.firstName,
@@ -105,7 +106,7 @@ class Supervisor extends Component {
     return (
       <div className="Supervisor">
         <h1>Supervisor Create Profile</h1>
-        <form>
+        <form onSubmit={this.handleFormSubmit}>
           <Textfield
             onChange={this.handleInputChange}
             id="FirstName"
@@ -206,11 +207,11 @@ class Supervisor extends Component {
             >
               Deselect All
             </button>
-            <button type="submit" className="btn btn-primary">
+            {/* <button type="submit" className="btn btn-primary">
               Save
-            </button>
+            </button> */}
             <div>
-              <input type="submit" value="submit" />
+              <input type="submit" value="subhjhjhbmit" />
             </div>
           </div>
           {/* <button onClick={this.handleFormSubmit}></button> */}

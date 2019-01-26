@@ -6,6 +6,7 @@ const signUpRoutes = require("./signup");
 const verifyRoutes = require("./verify");
 const logoutRoutes = require("./logout");
 const supervisorRoutes = require("./supervisors");
+const supervisorProfileRoutes = require("./supervisorprofiles");
 // const signinRoutes = require("/signin");
 //const loginController = require("../../controllers/loginController");
 //const singupRoutes = require("./signup");
@@ -19,6 +20,7 @@ router.use("/signup", signUpRoutes);
 router.use("/verify", verifyRoutes);
 router.use("/logout", logoutRoutes);
 router.use("/profile", profileRoutes);
+router.use("/supervisorprofile",supervisorProfileRoutes)
 // router.use("/signin", signinRoutes);
 
 
