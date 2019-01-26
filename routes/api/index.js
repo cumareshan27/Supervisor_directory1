@@ -5,6 +5,7 @@ const loginRoutes = require("./login");
 const signUpRoutes = require("./signup");
 const verifyRoutes = require("./verify");
 const logoutRoutes = require("./logout");
+const supervisorRoutes = require("./supervisors");
 // const signinRoutes = require("/signin");
 //const loginController = require("../../controllers/loginController");
 //const singupRoutes = require("./signup");
@@ -12,6 +13,7 @@ const logoutRoutes = require("./logout");
 
 // Book routes
 router.use("/residents", residentsRoutes);
+router.use("/supervisors", supervisorRoutes);
 router.use("/login", loginRoutes);
 router.use("/signup", signUpRoutes);
 router.use("/verify", verifyRoutes);

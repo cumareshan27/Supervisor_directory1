@@ -97,7 +97,7 @@ class Resident extends Component {
     //  .then(API.newestResident())
 
       .then(this.props.history.push("/Profile"))
-      // .catch(err => console.log(err));
+      .catch(err => console.log(err));
   };
 
 
@@ -140,9 +140,9 @@ class Resident extends Component {
               >
                 Deselect All
               </button>
-              <button type="submit" className="btn btn-primary">
+              {/* <button type="submit" className="btn btn-primary">
                 Save
-              </button>
+              </button> */}
           </div>
           <div>
             <input type="submit" value="Submit" />

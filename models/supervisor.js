@@ -14,7 +14,7 @@ const supervisorSchema = new Schema({
   zipCode: { type: String, required: true },
   licenceNumber : {type: String, required: true},
   licenceExpiry : {type: String, required: true},
-  // category : []
+  category : { type: Array, required: false }
 });
 
 // var categorySchema = Schema({

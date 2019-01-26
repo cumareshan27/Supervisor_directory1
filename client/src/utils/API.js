@@ -22,6 +22,30 @@ export default {
     return axios.get("/api/profile");
   },
 
+  // Below this line is all supervisor 
+
+   // Gets all resident
+   getSupervisor: function() {
+    return axios.get("api/supervisors");
+  },
+  // Gets the resident with the given id
+  getSupervisor: function(id) {
+    return axios.get("api/supervisors" + id);
+  },
+  // Deletes the resident with the given id
+  deleteSupervisor: function(id) {
+    return axios.delete("api/supervisors" + id);
+  },
+  // Saves a resident to the database
+  saveSupervisor: function(supervisorData) {
+    return axios.post("api/supervisors", supervisorData);
+  },
+
+  // Get the last Supervisor
+  newestSupervisor: function() {
+    return axios.get("/api/supervisorprofile");
+  },
+
     // Input the user details to users table  
     
     getUser: (query) => {

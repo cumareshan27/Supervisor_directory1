@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Textfield from './TextField';
 import API from '../utils/API.js';
 
-class Profile extends Component {
+class Supervisorprofile extends Component {
   state = {
-    resident: [],
+    supervisor: [],
   };
   componentDidMount() {
-    API.newestResident().then(res => this.setState({ resident: res.data }));
+    API.newestSupervisor().then(res => this.setState({ supervisor: res.data }));
   }
 
   render(){
@@ -16,7 +16,7 @@ class Profile extends Component {
       <div>
         <h1>Supervisor Profile</h1>
         <p>
-          {JSON.stringify(this.state.resident)}
+          {JSON.stringify(this.state.supervisor)}
         </p>
       </div>
     )
@@ -24,4 +24,4 @@ class Profile extends Component {
  
 }
 
-export default Profile;
+export default Supervisorprofile;
