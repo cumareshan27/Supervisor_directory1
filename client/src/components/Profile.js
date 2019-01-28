@@ -66,6 +66,38 @@ class Profile extends Component {
           {JSON.stringify(this.state.resident)};
         </p>
         {/* <p>dangerouslySetInnerHTML={ { __html: JSON.stringify(this.state.resident) } }</p> */}
+
+        <p>
+          <table>
+            <thead>
+              <tr>
+                <td>
+                  First Name
+                </td>
+                <td>
+                  LastName
+                </td>
+                <td>
+                  Email
+                </td>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  {this.state.resident.firstName}
+                </td>
+                <td>
+                  {this.state.resident.lastName}
+                </td>
+                <td>
+                  {this.state.resident.email}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
       </div>
     )
   }

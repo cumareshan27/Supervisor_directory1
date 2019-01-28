@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const residentController = require("../../controllers/residentController");
+const supervisorController = require("../../controllers/supervisorController");
 
 // Matches with "/api/residents"
 router.route("/")
@@ -18,5 +19,8 @@ router
   .route("/new")
   .get(residentController.findByNew);
 
+router
+  .route("/:phoneNumber")
+  .get(supervisorController.findByCategory);
 
 module.exports = router;

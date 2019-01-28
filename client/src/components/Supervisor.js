@@ -3,7 +3,7 @@ import Textfield from './TextField';
 import API from '../utils/API.js';
 import Checkbox from './Checkbox.js';
 
-const OPTIONS = ['Mental Health', 'Kumar', 'Joe', 'Ryan'];
+const OPTIONS = ['Mental Health', 'Kumar', 'Joe', 'Ryan', 'ADT'];
 
 class Supervisor extends Component {
   //  this.state = { value: '' };
