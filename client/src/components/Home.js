@@ -43,7 +43,7 @@ class Home extends Component {
               <input
                 className="form-control mr-sm-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Search - Coming Soon"
                 aria-label="Search"
               />
               <button
@@ -109,14 +109,14 @@ class Home extends Component {
                 <div className="field">
                   <label>Username</label>
                   <div className="ui left icon input">
-                    <input type="text" placeholder="Username" />
+                    <input type="text" placeholder="Will be incorporated after the MVP" />
                     <i aria-hidden="true" className="user icon" />
                   </div>
                 </div>
                 <div className="field">
                   <label>Password</label>
                   <div className="ui left icon input">
-                    <input type="password" />
+                    <input type="password" placeholder="Will be incorporated after the MVP"/>
                     <i aria-hidden="true" className="lock icon" />
                   </div>
                 </div>
@@ -124,9 +124,21 @@ class Home extends Component {
               </form>
             </div>
             <div className="middle aligned column">
-              <button className="ui big button" >
-                <i aria-hidden="true" className="signup icon" />Sign up
-              </button>
+              {/* <button onClick={this.handleFormSubmitResident} className="ui big button" > */}
+              {/* <button onClick={this.handleFormSubmitResident} className="ui big button" > */}
+              <a href="/registerresident">
+                <button className="ui big button">
+                  <i aria-hidden="true" className="signup icon" />
+                  Register as Resident
+                </button>{' '}
+              </a>
+              <br />
+              <a href="/registersupervisor">
+                <button className="ui big button">
+                  <i aria-hidden="true" className="signup icon" />
+                  Register as Supervisor
+                </button>{' '}
+              </a>
             </div>
           </div>
           <div className="ui vertical divider">Or</div>

@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Textfield from './TextField';
 import API from '../utils/API.js';
 import Checkbox from './Checkbox.js';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'semantic-ui-css/semantic.min.css';
 
-const OPTIONS = ['Mental Health', 'Kumar', 'Joe', 'Ryan', 'ADT'];
+const OPTIONS = ["Mental Health", "Substance Abuse", "Employee Assitance Program (EAP)", "Allergy & Immunlogy", "ADT"];;
 
 class Supervisor extends Component {
   //  this.state = { value: '' };
@@ -78,7 +80,7 @@ class Supervisor extends Component {
   };
 
   handleFormSubmit = event => {
-    console.log("Submit button supervisor")
+    console.log('Submit button supervisor');
     event.preventDefault();
     API.saveSupervisor({
       firstName: this.state.firstName,
@@ -105,8 +107,107 @@ class Supervisor extends Component {
   render() {
     return (
       <div className="Supervisor">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href="/">
+                  Home <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/supervisorprofile">
+                  Supervisor
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="/profile">
+                  Resident
+                </a>
+              </li>
+            </ul>
+            <form className="form-inline my-2 my-lg-0">
+              <input
+                className="form-control mr-sm-2"
+                type="search"
+                placeholder="Search - Coming Soon"
+                aria-label="Search"
+              />
+              <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </nav>
+
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <img
+                src="./TeamIcon2.jpg"
+                alt="Trulli"
+                width="300"
+                height="233"
+              />
+            </div>
+            <div className="col">
+              <div
+                id="carouselExampleSlidesOnly"
+                className="carousel slide"
+                data-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img
+                      src="./DOCTORCapture.JPG"
+                      className="d-block w-100"
+                      alt="Docs"
+                      width="300"
+                      height="300"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="./medicine-24.jpg"
+                      className="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="./TeamIcon2.jpg"
+                      className="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+
         <h1>Supervisor Create Profile</h1>
-        <form onSubmit={this.handleFormSubmit}>
+       
+        <div className="container" align = "center">
+        <form class="form-group" align = "center" onSubmit={this.handleFormSubmit}>
+        <div class="form-group row" align = "center">
           <Textfield
             onChange={this.handleInputChange}
             id="FirstName"
@@ -177,22 +278,12 @@ class Supervisor extends Component {
             value={this.state.zipCode}
             name="zipCode"
           />
-          <Textfield
-            onChange={this.handleInputChange}
-            id="licenceNumber"
-            label="licenceNumber"
-            value={this.state.licenceNumber}
-            name="licenceNumber"
-          />
-          <Textfield
-            onChange={this.handleInputChange}
-            id="licenceExpiry"
-            label="licenceExpiry"
-            value={this.state.licenceExpiry}
-            name="licenceExpiry"
-          />
-          {this.createCheckboxes()}
+         
+          
           <div className="form-group mt-2">
+          <br />
+          <div align = "left">{this.createCheckboxes()}
+          <br />
             <button
               type="button"
               className="btn btn-outline-primary mr-2"
@@ -207,15 +298,36 @@ class Supervisor extends Component {
             >
               Deselect All
             </button>
+            <br />
+            <br />
+            <Textfield
+            onChange={this.handleInputChange}
+            id="licenceNumber"
+            label="LicenceNumber"
+            value={this.state.licenceNumber}
+            name="licenceNumber"
+          />
+          <Textfield
+            onChange={this.handleInputChange}
+            id="licenceExpiry"
+            label="LicenceExpiry"
+            value={this.state.licenceExpiry}
+            name="licenceExpiry"
+          />
             {/* <button type="submit" className="btn btn-primary">
               Save
             </button> */}
+            <br />
+            <br />
             <div>
-              <input type="submit" value="subhjhjhbmit" />
+              <input type="submit" value="submit" className="btn btn-outline-primary mr-2"/>
             </div>
           </div>
           {/* <button onClick={this.handleFormSubmit}></button> */}
+          </div>
+          </div>
         </form>
+        </div>
       </div>
     );
   }
