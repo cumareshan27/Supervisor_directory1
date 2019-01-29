@@ -6,6 +6,16 @@ router.route("/")
   .get(supervisorController.findAll)
   .post(supervisorController.create);
   
+
+
+router
+  .route("/:category")
+  .get(supervisorController.findByCategory)
+
+router
+.route("/:phoneNumber")
+.get(supervisorController.findByphnNumber);
+  
 // Matches with "/api/supervisor/:id"
 router
   .route("/:id")
@@ -17,6 +27,7 @@ router
 router
   .route("/new")
   .get(supervisorController.findByNew);
+
 
 
 

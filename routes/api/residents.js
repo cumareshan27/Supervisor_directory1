@@ -20,7 +20,8 @@ router
   .get(residentController.findByNew);
 
 router
-  .route("/:phoneNumber")
+  .route("/:category")
   .get(supervisorController.findByCategory);
+
 
 module.exports = router;

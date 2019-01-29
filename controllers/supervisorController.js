@@ -49,10 +49,17 @@ module.exports = {
   },
 
   findByCategory: function(req, res) {
-    //console.log("This is the body of findbycategory route" + JSON.stringify(req.params.category))
+    console.log("This is the body of findbycategory route" + JSON.stringify(req.params.category))
     db.Supervisor
-     .find({"category":"Mental Health"})
+     .find({"category":req.params.category})
      .then(dbmodel => res.json(dbmodel))
      .catch(err => res.status(422).json(err));
+  },
+  
+  findByphnNumber: function(req, res) {
+    db.Supervisor
+      .find({"phoneNumber" : "8041231234"})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   },
 };
