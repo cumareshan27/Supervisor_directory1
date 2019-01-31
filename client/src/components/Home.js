@@ -28,13 +28,13 @@ class Home extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/supervisorprofile">
+                <a className="nav-link" href="/registersupervisor">
                   Supervisor
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/profile">
+                <a className="nav-link" href="/registerresident">
                   Resident
                 </a>
               </li>
