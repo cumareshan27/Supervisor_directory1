@@ -7,7 +7,7 @@ RealWorld Users:
 
 
 App Functionality:- 
-•	Residents students can search for their supervisors based on specialist categories 
+* Residents students can search for their supervisors based on specialist categories 
 •	2. Supervisors can view the students information, if they have been selected to be their supervisors 
 •	3. Students are able to search and apply for part time/full time jobs with in doctor’s offices around the country 
 •	4. Students are no longer depending on google docs or locally maintained excel sheets 
