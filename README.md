@@ -1,4 +1,4 @@
-Med-TOR, it is an online app for medical resident to find a suitable supervisor for their last year mentoring
+**Med-TOR, it is an online app for medical resident to find a suitable supervisor for their last year mentoring**
 
 Heroku:- https://immense-cove-93481.herokuapp.com/
 
@@ -8,29 +8,29 @@ RealWorld Users:
 
 App Functionality:- 
 * Residents students can search for their supervisors based on specialist categories 
-•	2. Supervisors can view the students information, if they have been selected to be their supervisors 
-•	3. Students are able to search and apply for part time/full time jobs with in doctor’s offices around the country 
-•	4. Students are no longer depending on google docs or locally maintained excel sheets 
+* Supervisors can view the students information, if they have been selected to be their supervisors 
+* Students are able to search and apply for part time/full time jobs with in doctor’s offices around the country 
+* Students are no longer depending on google docs or locally maintained excel sheets 
 
 MVP:- 
-•	Resident Students and Supervisors can create their profile
-•	View their created profile 
-•	Edit their profile 
+* Resident Students and Supervisors can create their profile
+* View their created profile 
+* Edit their profile 
 
 Future State:- 
-•	Residents can send emails from their profiles to a potential supervisor
-•	Supervisors will get an alert when someone viewed profile through an email 
-•	Supervisors have the ability to add students their trainee lists 
-•	Google analytics incorporated for tracking 
-•	Job search with in the APP 
-•	TDD implementation 
+* Residents can send emails from their profiles to a potential supervisor
+* Supervisors will get an alert when someone viewed profile through an email 
+* Supervisors have the ability to add students their trainee lists 
+* Google analytics incorporated for tracking 
+* Job search with in the APP 
+* TDD implementation 
 
 Technology:- 
-•	MERN stack 
-•	Passport.js is used for authorization 
-•	Bootstrap 
-•	Semantic UI
-•	Mocha Chai to implement TDD
+* MERN stack 
+* Passport.js is used for authorization 
+* Bootstrap 
+* Semantic UI
+* Mocha Chai to implement TDD
 
 
 
