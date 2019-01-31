@@ -1,3 +1,38 @@
+Med-TOR, it is an online app for medical resident to find a suitable supervisor for their last year mentoring
+
+Heroku:- https://immense-cove-93481.herokuapp.com/
+
+RealWorld Users:
+Med-TOR is a app developed to help resident student to identify their supervisor’s for their last year which is a must for most of the student who are specializing in medical field.
+
+
+App Functionality:- 
+Residents students can search for their supervisors based on specialist categories 
+Supervisors can view the students information, if they have been selected to be their supervisors 
+Students are able to search and apply for part time/full time jobs with in doctor’s offices around the country 
+Students are no longer depending on google docs or locally maintained excel sheets 
+
+MVP:- 
+Resident Students and Supervisors can create their profile
+View their created profile 
+Edit their profile 
+
+Future State:- 
+Residents can send emails from their profiles to a potential supervisor
+Supervisors will get an alert when someone viewed profile through an email 
+Supervisors have the ability to add students their trainee lists 
+Google analytics incorporated for tracking 
+Job search with in the APP 
+TDD implementation 
+
+Technology:- 
+This is a fully fledged MERN stack 
+Passport.js is used for authorization 
+Bootstrap 
+Semantic UI
+Mocha Chai to implement TDD
+
+Technical Implementation/Documents below:-  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
